@@ -31,7 +31,6 @@ let tasks = [
         priority: "Low",
         comments: "This task is good",
       },
-    // Add more sample tasks here...
   ];
   
   export const getTasks = () => tasks;

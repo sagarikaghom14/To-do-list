@@ -25,7 +25,7 @@ const TaskModal = ({ task, onSave, onCancel }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
-      <div className="bg-gray-50 border border-gray-600 rounded shadow-lg w-[50%]">
+      <div className="bg-gray-50 border border-gray-600 rounded shadow-lg w-[60%] mt-15">
         <h2 className="text-2xl font-medium text-gray-800 text-center border-b border-gray-400 py-4">
           {task ? "Edit Task" : "New Task"}
         </h2>
@@ -103,22 +103,22 @@ const TaskModal = ({ task, onSave, onCancel }) => {
               />
             </div>
           </div>
+          <div className="flex justify-end space-x-2 border-t border-gray-400 p-5 bg-gray-200">
+            <button
+              type="button"
+              onClick={onCancel}
+              className="px-5 py-2 bg-yellow-200 text-gray-700 border border-yellow-400 rounded hover:bg-yellow-300"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="px-6 py-2 bg-gray-700 text-yellow-200 border border-gray-50 rounded hover:bg-gray-800"
+            >
+              Save
+            </button>
+          </div>
         </form>
-        <div className="flex justify-end space-x-2 border-t border-gray-400 p-5 bg-gray-200">
-          <button
-            type="button"
-            onClick={onCancel}
-            className="px-5 py-2 bg-yellow-200 text-gray-700 border border-yellow-400 rounded hover:bg-yellow-300"
-          >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            className="px-6 py-2 bg-gray-700 text-yellow-200 border border-gray-50 rounded hover:bg-gray-800"
-          >
-            Save
-          </button>
-        </div>
       </div>
     </div>
   );
