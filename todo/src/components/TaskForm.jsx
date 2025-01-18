@@ -25,7 +25,7 @@ const TaskModal = ({ task, onSave, onCancel }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
-      <div className="bg-gray-50 border border-gray-600 rounded shadow-lg w-[60%] mt-15">
+      <div className="bg-gray-50 border border-gray-600 rounded shadow-lg w-[50%]">
         <h2 className="text-2xl font-medium text-gray-800 text-center border-b border-gray-400 py-4">
           {task ? "Edit Task" : "New Task"}
         </h2>
@@ -55,10 +55,11 @@ const TaskModal = ({ task, onSave, onCancel }) => {
                 value={formData.status}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
+                required
               >
-                <option>Not Started</option>
-                <option>In Progress</option>
-                <option>Completed</option>
+                <option value="Not Started">Not Started</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
               </select>
             </div>
 
@@ -71,6 +72,7 @@ const TaskModal = ({ task, onSave, onCancel }) => {
                 value={formData.dueDate}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
+                required
               />
             </div>
 
@@ -84,10 +86,11 @@ const TaskModal = ({ task, onSave, onCancel }) => {
                 value={formData.priority}
                 onChange={handleChange}
                 className="w-full border px-3 py-2 rounded"
+                required
               >
-                <option>Low</option>
-                <option>Normal</option>
-                <option>High</option>
+                <option value="Low">Low</option>
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
               </select>
             </div>
 
@@ -100,6 +103,7 @@ const TaskModal = ({ task, onSave, onCancel }) => {
                 onChange={handleChange}
                 className="w-full resize-none border px-3 py-2 rounded"
                 rows="4"
+                required
               />
             </div>
           </div>
